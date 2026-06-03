@@ -1,2 +1,2 @@
-com.fancia.backend.shared.upload.configAutoConfig
+com.fancia.backend.shared.upload.config.AutoConfig
 com.fancia.backend.shared.upload.storage.config.StorageAutoConfiguration
