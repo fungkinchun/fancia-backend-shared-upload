@@ -5,11 +5,13 @@ import com.fasterxml.jackson.annotation.JsonValue
 enum class UploadScope(@JsonValue val pathSegment: String) {
     USER("user"),
     EVENT("event"),
+    INTEREST_GROUP("interest-group"),
     VENUE("venue");
 
     fun allowedPurposes(): Set<UploadPurpose> = when (this) {
         USER -> setOf(UploadPurpose.PROFILE_PICTURE)
         EVENT -> setOf(UploadPurpose.COVER_IMAGE)
+        INTEREST_GROUP -> setOf(UploadPurpose.COVER_IMAGE)
         VENUE -> setOf(UploadPurpose.IMAGE)
     }
 }
